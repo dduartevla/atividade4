@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1> Formulário Super Herói </h1>
-    <form action="resultado.html" method="post">
+    <form action="supers.html" method="post">
         <div>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome"/>

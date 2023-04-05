@@ -13,10 +13,10 @@ public class SuperController {
         return "form";
     }
 
-    @PostMapping("/resultado.html")
+    @PostMapping("/supers.html")
     public ModelAndView resultado(SuperHeroi sp){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("form-resp");
+        mv.setViewName("superherois");
         mv.addObject("superHeroi", sp);
         return mv;
     }
