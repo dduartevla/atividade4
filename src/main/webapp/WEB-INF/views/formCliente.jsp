@@ -11,8 +11,8 @@
     <h1> Formulário Cliente </h1>
     <form action="formularioPizza.html" method="get">
         <div>
-            <label for="nomeCliente">Nome:</label>
-            <input type="text" id="nomeCliente" name="nomeCliente"/>
+            <label for="nomeCli">Nome:</label>
+            <input type="text" id="nomeCli" name="nomeCli"/>
         </div>
 
         <div>

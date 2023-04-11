@@ -26,14 +26,14 @@ public class PedidoController {
 
     private void setCliente(Cliente nc){
         this.c = nc;
-        this.mv.setViewName("novopedido");
+        this.mv.setViewName("novoPedido");
         this.mv.addObject("cliente", c);
     }
 
-    @PostMapping("/pedido.html")
-    public ModelAndView pedido (ArrayList<Pizza> pizzas){   
+    @PostMapping("/novoPedido.html")
+    public ModelAndView pedido (Pedido p){   
                   
-        this.mv.addObject("pizza", pizzas);
+        this.mv.addObject("pedido", p);
         return mv;
     }
 }

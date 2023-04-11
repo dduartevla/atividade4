@@ -1,16 +1,12 @@
 package br.ufjf.dcc193.deboraduarte.atividade4;
 
 public class Cliente {
-    String nomeCliente;
+
+    String nomeCli;
     String telefone;
     String endereco;
     
-    public String getNome() {
-        return nomeCliente;
-    }
-    public void setNome(String nome) {
-        this.nomeCliente = nome;
-    }
+    
     public String getTelefone() {
         return telefone;
     }
@@ -22,6 +18,12 @@ public class Cliente {
     }
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+    public String getNomeCli() {
+        return nomeCli;
+    }
+    public void setNomeCli(String nomeCli) {
+        this.nomeCli = nomeCli;
     }
 
     

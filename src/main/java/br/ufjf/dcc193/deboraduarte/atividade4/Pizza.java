@@ -2,9 +2,9 @@ package br.ufjf.dcc193.deboraduarte.atividade4;
 
 public class Pizza {
 
-    String tamanho;
-    String sabor;
-    float valor;
+    private String tamanho;
+    private String sabor;
+    private float valor;
 
     private void calculaValor(float precoBase){
         
@@ -24,7 +24,7 @@ public class Pizza {
         }
     }
 
-    public void setValor(){
+    private void setValor(){
 
         switch (sabor){
 
@@ -70,6 +70,9 @@ public class Pizza {
         }
     }
 
+    public float getValor(){
+        return this.valor;
+    }
 
     public String getTamanho() {
         return tamanho;
