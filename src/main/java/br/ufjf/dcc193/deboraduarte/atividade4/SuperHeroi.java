@@ -1,7 +1,5 @@
 package br.ufjf.dcc193.deboraduarte.atividade4;
 
-import org.springframework.stereotype.Controller;
-
 public class SuperHeroi {
 
     private String nome;
