@@ -81,6 +81,7 @@ public class Pizza {
         return tamanho;
     }
     public void setTamanho(String tamanho) {
+        System.out.println(tamanho + "na pizza");
         this.tamanho = tamanho;
     }
     public String getSabor() {
