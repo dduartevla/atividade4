@@ -10,6 +10,7 @@
 <body>
     <h1> Atividade04: Home </h1>
     <p> Débora I. R. Duarte - 201776029 </p>
-    <p> Inserir novo super herói <a href="formulario.html">aqui</a></p>
+    <p> Inserir novo super herói <a href="formulario.html">aqui</a>.</p>
+    <p> Faça o pedido da pizza <a href="formularioCliente.html">aqui</a>.</p>
 </body>
 </html>
