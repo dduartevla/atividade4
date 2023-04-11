@@ -12,6 +12,14 @@
     <p>Endereço: ${cliente.endereco}</p>
     <p>Telefone: ${cliente.telefone}</p>
 
+    <p>Meu pedido: </p>
+
+    <ul>
+        <c:forEach items="${pedido.getPizzas()}" var="item">
+            <li>${item}</li>
+        </c:forEach>
+    </ul>
+
     <p>Valor: ${pedido.valor}</p>
 </body>
 </html>

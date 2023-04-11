@@ -9,26 +9,19 @@
 </head>
 <body>
     <h1> Formulário Pizza </h1>
-    <p> Olá, ${cliente.nomeCli}!</p>
-   
-    <p>Meu pedido: </p>
-
-    <ul>
-        <c:forEach items="${pedido.getPizzas()}" var="item">
-            <li>${item}</li>
-        </c:forEach>
-    </ul>
+    <p> Olá, ${cliente.nomeCli}!</p>  
+    
 
     <form action="novoPedido.html" method="post">
         <div>
-            <label for="pizza.tamanho">Escolha o tamanho:</label>
+            <label for="tamanho">Escolha o tamanho:</label>
             <select id="tamanho" name="tamanho">
                 <option value="p">Pequena - 20cm</option>
                 <option value="m">Media - 30cm</option>
                 <option value="g">Grande - 45cm</option>
             </select>
 
-            <label for="pizza.sabor">escolha o sabor:</label>
+            <label for="sabor">escolha o sabor:</label>
             <select id="sabor" name="sabor">
                 <option value="CALABRESA">CALABRESA</option>
                 <option value="TRESQUEIJOS">TRES QUEIJOS</option>
@@ -48,7 +41,6 @@
         <div>
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpar">
-        <input type="button" value="Adicionar" >
         </div>
     </form>
         

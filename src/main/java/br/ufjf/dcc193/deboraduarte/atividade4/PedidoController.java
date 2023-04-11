@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 @Controller
 public class PedidoController {
 
@@ -31,24 +33,15 @@ public class PedidoController {
         return "formPizza";
     }
 
-    @PostMapping({"/formularioPizza.html"})
-    public String formPizza(Pizza p){
-        pedido.getPizzas().add(p);
-        return "formPizza";
-    }
-
     private void setCliente(Cliente nc){
         this.c = nc;
         this.mv.setViewName("novoPedido");
         this.mv.addObject("cliente", c);
     }
 
-    
-
     @PostMapping("/novoPedido.html")
-    public ModelAndView pedido (){    
-        
-        
+    public ModelAndView pedido (Pizza p){ 
+        pedido.getPizzas().add(p);  
         return mv;
     }
 }
