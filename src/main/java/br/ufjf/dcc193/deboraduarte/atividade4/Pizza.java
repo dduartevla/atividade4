@@ -11,20 +11,23 @@ public class Pizza {
         switch(tamanho){
 
             case "M":
+                this.tamanho = "Media";
                 this.valor = precoBase*2;
             break;
 
             case "G":
+                this.tamanho = "Grande";
                 this.valor = precoBase*4;
             break;
 
             default:
+                this.tamanho = "Pequena";
                 this.valor = precoBase;
 
         }
     }
 
-    private void setValor(){
+    public void setValor(){
 
         switch (sabor){
 
@@ -85,7 +88,6 @@ public class Pizza {
     }
     public void setSabor(String sabor) {
         this.sabor = sabor;
-        setValor();
     }
 
     

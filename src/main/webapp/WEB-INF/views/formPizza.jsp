@@ -9,8 +9,7 @@
 </head>
 <body>
     <h1> Formulário Pizza </h1>
-    <p> Olá, ${cliente.nomeCli}!</p>  
-    
+    <p> Olá, ${cliente.nomeCli}!</p>      
 
     <form action="novoPedido.html" method="post">
         <div>
@@ -39,8 +38,8 @@
 
         </br>
         <div>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
         </div>
     </form>
         

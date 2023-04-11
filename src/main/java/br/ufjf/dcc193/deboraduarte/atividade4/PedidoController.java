@@ -13,13 +13,14 @@ import jakarta.servlet.http.HttpServletRequest;
 public class PedidoController {
 
     ModelAndView mv;
-    Cliente c;
     Pedido pedido;
+    Cliente c;
 
     public PedidoController(){
         this.mv = new ModelAndView();
         this.pedido = new Pedido();
-        this.c = new Cliente();
+        
+
     }
     
     @GetMapping({"/formularioCliente.html"})
@@ -29,19 +30,21 @@ public class PedidoController {
 
     @GetMapping({"/formularioPizza.html"})
     public String formPizza(Cliente nc){
-        setCliente(nc);
+        this.c = nc;
+        pedido.setCliente(nc);
+        this.mv.addObject("cliente", c);     
+        System.out.println(nc.getNomeCli());        
         return "formPizza";
     }
 
-    private void setCliente(Cliente nc){
-        this.c = nc;
-        this.mv.setViewName("novoPedido");
-        this.mv.addObject("cliente", c);
-    }
-
     @PostMapping("/novoPedido.html")
-    public ModelAndView pedido (Pizza p){ 
-        pedido.getPizzas().add(p);  
+    public ModelAndView pedido (Pizza p){             
+        p.setValor();
+        pedido.setPizza(p);
+        pedido.setValor();
+        System.out.println(p.getTamanho());
+        this.mv.setViewName("novoPedido");
+        this.mv.addObject("pedido", pedido);         
         return mv;
     }
 }

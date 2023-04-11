@@ -8,18 +8,21 @@
     <title>Pedido</title>
 </head>
 <body>
-    <p>Cliente: ${cliente.nomeCli}</p>
-    <p>Endereço: ${cliente.endereco}</p>
-    <p>Telefone: ${cliente.telefone}</p>
+    <h1>Resumo Pedido</h1>
+    <p>Cliente: ${pedido.cliente.nomeCli}</p>
+    <p>Endereço: ${pedido.cliente.endereco}</p>
+    <p>Telefone: ${pedido.cliente.telefone}</p>
 
-    <p>Meu pedido: </p>
+    <p> Pizza: ${pedido.pizza.sabor} - ${pedido.pizza.tamanho} - R$ ${pedido.pizza.valor}</p>
 
-    <ul>
-        <c:forEach items="${pedido.getPizzas()}" var="item">
-            <li>${item}</li>
-        </c:forEach>
-    </ul>
+    <p>Entrega: R$10,00</p>
 
     <p>Valor: ${pedido.valor}</p>
+
+    <div>
+        <form action="formularioPizza.html" method="get">
+            <input type="submit" value="Editar">
+        </form>
+    </div>
 </body>
 </html>
