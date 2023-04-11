@@ -10,8 +10,15 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PedidoController {
 
-    ModelAndView mv = new ModelAndView();
-    Cliente c = new Cliente();
+    ModelAndView mv;
+    Cliente c;
+    Pedido pedido;
+
+    public PedidoController(){
+        this.mv = new ModelAndView();
+        this.pedido = new Pedido();
+        this.c = new Cliente();
+    }
     
     @GetMapping({"/formularioCliente.html"})
     public String formCliente(){
@@ -24,16 +31,24 @@ public class PedidoController {
         return "formPizza";
     }
 
+    @PostMapping({"/formularioPizza.html"})
+    public String formPizza(Pizza p){
+        pedido.getPizzas().add(p);
+        return "formPizza";
+    }
+
     private void setCliente(Cliente nc){
         this.c = nc;
         this.mv.setViewName("novoPedido");
         this.mv.addObject("cliente", c);
     }
 
+    
+
     @PostMapping("/novoPedido.html")
-    public ModelAndView pedido (Pedido p){   
-                  
-        this.mv.addObject("pedido", p);
+    public ModelAndView pedido (){    
+        
+        
         return mv;
     }
 }

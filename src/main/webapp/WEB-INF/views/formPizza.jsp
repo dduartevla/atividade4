@@ -10,165 +10,47 @@
 <body>
     <h1> Formulário Pizza </h1>
     <p> Olá, ${cliente.nomeCli}!</p>
+   
+    <p>Meu pedido: </p>
+
+    <ul>
+        <c:forEach items="${pedido.getPizzas()}" var="item">
+            <li>${item}</li>
+        </c:forEach>
+    </ul>
 
     <form action="novoPedido.html" method="post">
-
         <div>
-            <table border="1">
-                <tr>
-                    <td><b>Selecione o Sabor:</b></td>
-                    <td></td>
-                    <td><b>Selecione o tamanho:</b></td>
-                </tr>
+            <label for="pizza.tamanho">Escolha o tamanho:</label>
+            <select id="tamanho" name="tamanho">
+                <option value="p">Pequena - 20cm</option>
+                <option value="m">Media - 30cm</option>
+                <option value="g">Grande - 45cm</option>
+            </select>
 
-                <tr>
-                    <td><b>CALABRESA</b></td>
-                    <td><input type="checkbox" id="sabor" name="sabor" value="CALABRESA"/></td>
-                    <td><label for="tamanho">P - 20cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="P"/>
-            
-                        <label for="tamanho">M - 35cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="m"/>
-            
-                        <label for="tamanho">G - 50cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="g"/>
-                    </td>
-                </tr>
+            <label for="pizza.sabor">escolha o sabor:</label>
+            <select id="sabor" name="sabor">
+                <option value="CALABRESA">CALABRESA</option>
+                <option value="TRESQUEIJOS">TRES QUEIJOS</option>
+                <option value="BACON">BACON</option>
+                <option value="FRANGO">FRANGO</option>
+                <option value="MARGUERITA">MARGUERITA</option>
+                <option value="MUSSARELA">MUSSARELA</option>
+                <option value="PEPPERONI">PEPPERONI</option>
+                <option value="PRESUNTO">PRESUNTO</option>
+                <option value="PORTUGUESA">PORTUGUESA</option>
+                <option value="NAPOLITANA">NAPOLITANA</option>
 
-                <tr>
-                    <td><b>TRES QUEIJOS</b></td>
-                    <td><input type="checkbox" id="sabor" name="sabor" value="TRESQUEIJOS"/></td>
-                    <td><label for="tamanho">P - 20cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="P"/>
-            
-                        <label for="tamanho">M - 35cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="m"/>
-            
-                        <label for="tamanho">G - 50cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="g"/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><b>BACON</b></td>
-                    <td><input type="checkbox" id="sabor" name="sabor" value="BACON"/></td>
-                    <td><label for="tamanho">P - 20cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="P"/>
-            
-                        <label for="tamanho">M - 35cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="m"/>
-            
-                        <label for="tamanho">G - 50cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="g"/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><b>FRANGO</b></td>
-                    <td><input type="checkbox" id="sabor" name="sabor" value="FRANGO"/></td>
-                    <td><label for="tamanho">P - 20cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="P"/>
-            
-                        <label for="tamanho">M - 35cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="m"/>
-            
-                        <label for="tamanho">G - 50cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="g"/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><b>MARGUERITA</b></td>
-                    <td><input type="checkbox" id="sabor" name="sabor" value="MARGUERITA"/></td>
-                    <td><label for="tamanho">P - 20cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="P"/>
-            
-                        <label for="tamanho">M - 35cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="m"/>
-            
-                        <label for="tamanho">G - 50cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="g"/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><b>MUSSARELA</b></td>
-                    <td><input type="checkbox" id="sabor" name="sabor" value="MUSSARELA"/></td>
-                    <td><label for="tamanho">P - 20cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="P"/>
-            
-                        <label for="tamanho">M - 35cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="m"/>
-            
-                        <label for="tamanho">G - 50cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="g"/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><b>PEPPERONI</b></td>
-                    <td><input type="checkbox" id="sabor" name="sabor" value="PEPPERONI"/></td>
-                    <td><label for="tamanho">P - 20cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="P"/>
-            
-                        <label for="tamanho">M - 35cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="m"/>
-            
-                        <label for="tamanho">G - 50cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="g"/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><b>PRESUNTO</b></td>
-                    <td><input type="checkbox" id="sabor" name="sabor" value="PRESUNTO"/></td>
-                    <td><label for="tamanho">P - 20cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="P"/>
-            
-                        <label for="tamanho">M - 35cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="m"/>
-            
-                        <label for="tamanho">G - 50cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="g"/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><b>PORTUGUESA</b></td>
-                    <td><input type="checkbox" id="sabor" name="sabor" value="PORTUGUESA"/></td>
-                    <td><label for="tamanho">P - 20cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="P"/>
-            
-                        <label for="tamanho">M - 35cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="m"/>
-            
-                        <label for="tamanho">G - 50cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="g"/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><b>NAPOLITANA</b></td>
-                    <td><input type="checkbox" id="sabor" name="sabor" value="NAPOLITANA"/></td>
-                    <td><label for="tamanho">P - 20cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="P"/>
-            
-                        <label for="tamanho">M - 35cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="m"/>
-            
-                        <label for="tamanho">G - 50cm</label>
-                        <input type="checkbox" id="tamanho" name="tamanho" value="g"/>
-                    </td>
-                </tr>
-            </table>
+            </select>
         </div>
 
-    </br>
+        </br>
         <div>
-            <input type="submit">
-            <input type="reset">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+        <input type="button" value="Adicionar" >
         </div>
-        
     </form>
+        
 </body>
 </html>
