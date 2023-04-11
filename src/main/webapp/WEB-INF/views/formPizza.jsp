@@ -15,8 +15,8 @@
         <div>
             <label for="tamanho">Escolha o tamanho:</label>
             <select id="tamanho" name="tamanho">
-                <option value="p">Pequena - 20cm</option>
                 <option value="m">Media - 30cm</option>
+                <option value="p">Pequena - 20cm</option>                
                 <option value="g">Grande - 45cm</option>
             </select>
 

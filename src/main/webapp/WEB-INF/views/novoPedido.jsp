@@ -18,11 +18,5 @@
     <p>Entrega: R$10,00</p>
 
     <p>Valor: ${pedido.valor}</p>
-
-    <div>
-        <form action="formularioPizza.html" method="get">
-            <input type="submit" value="Editar">
-        </form>
-    </div>
 </body>
 </html>
